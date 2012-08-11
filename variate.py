@@ -25,7 +25,10 @@ import random
 # Variate nodes form a binary tree
 class Variate:
 
-	# tokens is either a list or a dict of (token, count) pairs
+	# tokens is either a list or a dict of (token, count) pairs.
+	# increasing max_node_size increases the runtime of the final step but
+	# decreases total memory usage. I imagine 1000 should be good for most
+	# environments.
 	def __init__(self, tokens, max_node_size = 1000):
 		if isinstance(tokens, dict):
 			tokens = tokens.items()
