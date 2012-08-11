@@ -39,8 +39,8 @@ class Variate:
 		else:
 			self.tokens = None
 			length = len(tokens)
-			self.left = Variate(tokens[:length/2])
-			self.right = Variate(tokens[length/2:])
+			self.left = Variate(tokens[:length/2], max_node_size)
+			self.right = Variate(tokens[length/2:], max_node_size)
 
  	# selects a random token according to the distribution of token counts
  	# equivalent to creating a single list where each token appears token_count
